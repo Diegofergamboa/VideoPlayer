@@ -16,11 +16,15 @@ $pause.addEventListener('click', handlePause);
 
 function handlePlay () {
     $video.play()
+    $play.hidden = true
+    $pause.pause = false   
     console.log('Click on play!')
 };
 
 function handlePause () {
     $video.pause()
+    $pause.hidden = true
+    $play.pause = false
     console.log('Click on pause!')
 }
 
