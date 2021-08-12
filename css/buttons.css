@@ -9,7 +9,13 @@
     background-position: center;
     border: none;
     background-repeat: initial;
+    cursor: pointer; /* Esto es para que cuando pase por encima el cursor cambie del puntero a manito*/
 }
+
+.button:active { /* Aqui basicamente estoy diciendo que, que quiero que pase cuando le doy en el click, esto es una pseudoclase en definitiva */
+    transform: scale(0.8);
+}
+
 #play {
     background-image: url(../sources/assets/images/play.svg);
 
