@@ -1,0 +1,28 @@
+
+.button {
+    height: 26.666667938232422px;
+    width: 26.666667938232422px;
+    left: 2.66668701171875px;
+    top: 2.6666717529296875px;
+    border-radius: 0px;
+    background-color: transparent;    
+    background-position: center;
+    border: none;
+    background-repeat: initial;
+}
+#play {
+    background-image: url(../sources/assets/images/play.svg);
+
+}
+#pause {
+    background-image: url(../sources/assets/images/pause.svg);
+
+}
+#backward {
+    background-image: url(../sources/assets/images/-10.svg);
+
+}
+#forward {
+    background-image: url(../sources/assets/images/+10.svg);
+
+}
