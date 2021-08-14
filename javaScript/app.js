@@ -25,12 +25,12 @@ function handlePause () {
     console.log('Click on pause!')
 }
 
-function handleBackward() {
-    $video.currentTime = $video.currentTime - 10 ;
-    console.log('Atrasaste 10 segundos el video'+ $video.currenTime());
+function handleBackward () {
+    $video.currentTime -= 10 ;
+    console.log('Atrasaste 10 segundos el video'+ $video.currentTime);
 }
 
 function handleForward () {
-    $video.currentTime = $video.currenTime + 10 ;
-    console.log('Adelantaste 10 segundos el video', $video.currenTime());
+    $video.currentTime += 10 ;
+    console.log('Adelantaste 10 segundos el video' + $video.currentTime);
 }
