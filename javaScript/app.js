@@ -1,30 +1,36 @@
-// Que al darle click, haga el efecto de pequeño del mouse
-/* Esto lo realicé en CSS directamente, primero colocnado la propiedad
-de pointer:cursor y, con una pseudoclase, llamé al método de transformer,
-con el cual le cambié la escala al dar click. */
-
-// Que al darle click y Play, se pausen y activen.
-
-// Que al darle click a pausa y a play, se cambien entre ellos 
 
 const $video = document.querySelector('#video');
 const $play = document.querySelector('#play');
 const $pause = document.querySelector('#pause');
+const $backward = document.querySelector('#backward');
+const $forward = document.querySelector('#forward');
 
 $play.addEventListener('click', handlePlay);
 $pause.addEventListener('click', handlePause);
+$backward.addEventListener('click', handleBackward);
+$forward.addEventListener('click', handleForward);
+
 
 function handlePlay () {
     $video.play()
     $play.hidden = true
-    $pause.pause = false   
+    $pause.hidden = false   
     console.log('Click on play!')
 };
 
 function handlePause () {
     $video.pause()
     $pause.hidden = true
-    $play.pause = false
+    $play.hidden = false
     console.log('Click on pause!')
 }
 
+function handleBackward() {
+    $video.currentTime = $video.currentTime - 10 ;
+    console.log('Atrasaste 10 segundos el video'+ $video.currenTime());
+}
+
+function handleForward () {
+    $video.currentTime = $video.currenTime + 10 ;
+    console.log('Adelantaste 10 segundos el video', $video.currenTime());
+}

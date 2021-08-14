@@ -8,11 +8,18 @@
     <link href="./css/styles.css" rel="stylesheet">
 </head>
 <body>
-    <button class="button" id="play"></button>
-    <button class="button" id="pause"></button>
-    <button class="button" id="backward"></button>
-    <button class="button" id="forward"></button>
-    <video id="video" src="./sources/assets/videos/lofi.mp4" width="200" muted controls ></video>
+    <div class="wrapper"> 
+        <div class="player">
+            <video id="video" src="./sources/assets/videos/lofi.mp4" ></video>
+            <h2 class="player_title">Musica para programar</h2>
+            <div class="player_actions">
+                <button class="button" id="play" title="Reproducir" aria-label="Reproducir"></button>
+                <button class="button" id="pause" title="Pausa" aria-label="Pausa"></button>
+                <button class="button" id="backward" title="Atrasar 10 segundos" aria-label="Atrasar 10 segundos"></button>
+                <button class="button" id="forward" title="Adelantar 10 segundos" aria-label="Adelantar 10 segundos"></button>
+            </div> 
+        </div>
+    </div>
     <script src="./javaScript/app.js"></script>
 </body>
 </html>

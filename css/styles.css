@@ -1,5 +1,34 @@
 @import 'buttons.css' ;
 body {
     background-color: #26B4BC;
-    
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper {
+    max-inline-size: 900px;
+    margin: auto;
+}
+.player {
+    margin-block-start: 100px;
+    border: 10px solid tomato;
+    position : relative ;
+}
+.player video {
+    inline-size: 100%;
+    aspect-ratio: 16/9; /* para que no salte */
+}
+.player_title {
+    color: white;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 20px;
+    border: 10px tomato;
+}
+.player_actions {
+    position : absolute;
+    border: 10px tomato;
+    inset: 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* z-index: 2; */ /* propiedad para que tenga mayor relevancia sobre el otro documento
 }
