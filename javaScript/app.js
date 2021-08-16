@@ -34,3 +34,20 @@ function handleForward () {
     $video.currentTime += 10 ;
     console.log('Adelantaste 10 segundos el video' + $video.currentTime);
 }
+
+
+const $progress = document.querySelector('#progress')
+$video.addEventListener('loadedmetadata', handleLoaded);
+$video.addEventListener('timeUpdate', handletimeUpdate);
+$progress.addEventListener('input',handleInput);
+
+function handleLoaded () {
+    $progress.max = $video.duration;
+};
+function handletimeUpdate () {
+    $progress.value = $video.currentTime
+}
+function handleInput () {
+    $video.currentTime = $progress.value ;
+    console.log($progress.value) ;
+};

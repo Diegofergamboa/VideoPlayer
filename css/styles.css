@@ -15,6 +15,8 @@ body {
     inline-size: 100%;
     aspect-ratio: 16/9; /* para que no salte */
     vertical-align: middle;
+    object-fit: cover;
+
 }
 .player_title {
     color: white;
@@ -30,6 +32,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     /* z-index: 2; */ /* propiedad para que tenga mayor relevancia sobre el otro documento*/ 
 }
 
@@ -46,3 +49,15 @@ body {
 .player_progress input {
     flex: 1;
 };
+
+.player_overlay {
+    position: absolute ;
+    inset: 0 ;
+    opacity: 0;
+    transition: .3s opacity;
+}
+
+
+.player:hover .player_overlay {
+    opacity: 1 ;
+}
