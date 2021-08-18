@@ -10,6 +10,7 @@ $pause.addEventListener('click', handlePause);
 $backward.addEventListener('click', handleBackward);
 $forward.addEventListener('click', handleForward);
 
+// Botones para play, pausa, adelantar y, atrasar 10 minutos 
 
 function handlePlay () {
     $video.play()
@@ -35,19 +36,30 @@ function handleForward () {
     console.log('Adelantaste 10 segundos el video' + $video.currentTime);
 }
 
+/*
+El evento loadedmetadata se produce cuando se ha cargado los metadatos para el audio / vídeo especificado.
+Los metadatos para audio / vídeo se compone de: la duración, las dimensiones (vídeo) y pistas de texto.
+*/
+
 
 const $progress = document.querySelector('#progress')
 $video.addEventListener('loadedmetadata', handleLoaded);
-$video.addEventListener('timeUpdate', handletimeUpdate);
+/*
+El evento loadedmetadata se produce cuando se ha cargado los metadatos para el audio / vídeo especificado.
+Los metadatos para audio / vídeo se compone de: la duración, las dimensiones (vídeo) y pistas de texto.
+*/
+$video.addEventListener('timeupdate', handletimeUpdate);
+// El método Object.values() devuelve un array con los valores correspondientes a las propiedades enumerables de un objeto. 
 $progress.addEventListener('input',handleInput);
 
 function handleLoaded () {
     $progress.max = $video.duration;
+    console.log(`El video está cargado y, tiene una duración de: ${$progress.max}`)
 };
 function handletimeUpdate () {
-    $progress.value = $video.currentTime
-}
+    $progress.value = $video.currentTime; //Aqui agregué el valor del tiempo del video en la barrita de reproducción
+};
 function handleInput () {
-    $video.currentTime = $progress.value ;
-    console.log($progress.value) ;
+    $video.currentTime = $progress.value ; //Aquí estoy agregando el valor del tiempo actual a mi barrita de progreso
+    console.log($progress.value) ; //Valor de la barrita.
 };
