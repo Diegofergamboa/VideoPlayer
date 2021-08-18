@@ -9,7 +9,7 @@ $play.addEventListener('click', handlePlay);
 $pause.addEventListener('click', handlePause);
 $backward.addEventListener('click', handleBackward);
 $forward.addEventListener('click', handleForward);
-
+$pause.hidden = true
 // Botones para play, pausa, adelantar y, atrasar 10 minutos 
 
 function handlePlay () {

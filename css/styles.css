@@ -23,7 +23,6 @@ body {
     position: absolute;
     inset-block-start: 0;
     inset-inline-start: 20px;
-    /* border: 10px tomato; */
 }
 .player_actions {
     position : absolute;
@@ -48,7 +47,7 @@ body {
 
 .player_progress input {
     flex: 1;
-};
+}
 
 .player_overlay {
     position: absolute ;
@@ -57,7 +56,7 @@ body {
     transition: .3s opacity;
 }
 
-
-.player:hover .player_overlay {
+.player_overlay:hover {
     opacity: 1 ;
+    border: 100px red;
 }
