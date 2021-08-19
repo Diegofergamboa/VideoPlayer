@@ -43,6 +43,7 @@ Los metadatos para audio / vídeo se compone de: la duración, las dimensiones (
 
 
 const $progress = document.querySelector('#progress')
+
 $video.addEventListener('loadedmetadata', handleLoaded);
 /*
 El evento loadedmetadata se produce cuando se ha cargado los metadatos para el audio / vídeo especificado.
