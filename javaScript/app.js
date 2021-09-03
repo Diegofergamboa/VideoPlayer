@@ -41,7 +41,7 @@ El evento loadedmetadata se produce cuando se ha cargado los metadatos para el a
 Los metadatos para audio / vídeo se compone de: la duración, las dimensiones (vídeo) y pistas de texto.
 */
 
-
+ 
 const $progress = document.querySelector('#progress')
 
 $video.addEventListener('loadedmetadata', handleLoaded);
